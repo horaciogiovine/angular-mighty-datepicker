@@ -218,7 +218,7 @@
               return;
             }
 
-            if ($scope.options.disabled) {
+            if (!$scope.options.disabled) {
               switch ($scope.options.mode) {
                 case "multiple":
                   if (day.selected) {

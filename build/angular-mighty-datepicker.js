@@ -9,6 +9,7 @@
         start: null,
         filter: void 0,
         callback: void 0,
+        rangeChanged: void 0,
         markerTemplate: "{{ day.marker }}",
         template: pickerTemplate,
         disabled: false
@@ -191,6 +192,11 @@
               for (m = _i = 0, _ref = $scope.options.months; 0 <= _ref ? _i < _ref : _i > _ref; m = 0 <= _ref ? ++_i : --_i) {
                 _results.push(_buildMonth(moment($scope.options.start).add(m, 'months')));
               }
+
+              if ($scope.options.rangeChanged) {
+                $scope.options.rangeChanged($scope.options.start);
+              }
+
               return _results;
             })();
           };

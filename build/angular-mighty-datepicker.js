@@ -21,7 +21,7 @@
         scope: {
           model: '=ngModel',
           options: '=',
-          markers: '=',
+          markers: '<',
           after: '=',
           before: '=',
           rangeFrom: '=',
